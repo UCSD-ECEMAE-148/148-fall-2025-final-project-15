@@ -12,6 +12,56 @@ This project implements an automated laser targeting system on a Donkey Car-styl
 4. 🔧 **Controls pan/tilt servos** to aim a laser pointer at the target
 5. 🌐 **Streams live video** to a web browser for monitoring
 
+### 📸 Web Interface
+
+![Web Stream Interface](cam_stream_server.webp)
+
+### 💻 Example Terminal Output
+
+```
+(venv) team15@ucsdrobocar-148-15:~/projects/depthai-core $ python person_distance_web_servo.py
+Setting up servo controller...
+
+==================================================
+LASER TRACKING MODE
+Open in browser: http://localhost:5000
+(with SSH port forwarding)
+==================================================
+
+ * Serving Flask app 'person_distance_web_servo'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+Press CTRL+C to quit
+Servos initialized: pan=ch7, tilt=ch4
+Loading YOLO model...
+YOLO loaded!
+Starting pipeline...
+Pipeline running!
+FOV: 71.9° horizontal, 56.7° vertical
+LASER TRACKING ENABLED - will point at nearest person
+[3] x=250, y=325, dist=0.46m | pan=93.3° tilt=87.0° [TRACKING]
+[4] x=337, y=352, dist=0.46m | pan=92.6° tilt=83.9° [TRACKING]
+[10] No person detected - returning to center
+[20] No person detected - returning to center
+[25] x=524, y=234, dist=0.68m | pan=84.0° tilt=90.2° [TRACKING]
+[26] x=533, y=161, dist=0.96m | pan=79.6° tilt=92.9° [TRACKING]
+[27] x=576, y=170, dist=1.29m | pan=74.9° tilt=94.5° [TRACKING]
+[29] x=586, y=167, dist=1.75m | pan=74.6° tilt=94.8° [TRACKING]
+[30] x=581, y=156, dist=1.95m | pan=71.3° tilt=96.3° [TRACKING]
+[33] x=530, y=157, dist=2.31m | pan=77.4° tilt=95.1° [TRACKING]
+[34] x=523, y=156, dist=2.56m | pan=75.2° tilt=96.5° [TRACKING]
+[35] x=525, y=156, dist=2.36m | pan=73.7° tilt=97.6° [TRACKING]
+[37] x=521, y=156, dist=2.38m | pan=76.1° tilt=96.7° [TRACKING]
+[38] x=494, y=156, dist=2.50m | pan=75.3° tilt=97.6° [TRACKING]
+[39] x=486, y=156, dist=2.72m | pan=75.1° tilt=98.3° [TRACKING]
+[40] x=444, y=152, dist=2.72m | pan=76.3° tilt=98.9° [TRACKING]
+[41] x=411, y=153, dist=2.88m | pan=78.2° tilt=99.3° [TRACKING]
+[42] x=408, y=152, dist=2.69m | pan=79.7° tilt=99.7° [TRACKING]
+```
+
 ## 🛠️ Hardware Requirements
 
 - 🍓 Raspberry Pi 5 (or similar)
